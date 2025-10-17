@@ -26,5 +26,8 @@ def task3(request):
 # Задание 4.
 
 def task4(request):
-    need = Book.objects.filter(price__gt=1000,  publication_year__lt=1980 ).order_by('-price')
-    return render(request, 'in3.html', {'need ': need})
+    need = Book.objects.filter(price__gt=1000,  publication_year__lt=1980).order_by('-price')
+    context= {
+        'need': need
+    }
+    return render(request, 'in3.html', context)

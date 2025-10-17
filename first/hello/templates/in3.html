@@ -6,8 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-
- <h1> {{ need }}</h1>
-
+    <table border="1">
+        <caption>Дорогие старые книги</caption>
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Автор</th>
+                <th>Год</th>
+                <th>Цена</th>
+            </tr>
+        </thead>
+        <tbody>
+            { % for book in need % }
+            <tr>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
