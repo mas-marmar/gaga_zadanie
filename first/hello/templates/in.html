@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-		{% for book in books %}
-		<h1> {{ book }}</h1>
-		{% endfor %}
-</body>
+		<title>Библиотека</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>имя автора {{ author.name }} </h1>
+		<ol>
+			{% for book in books %}
+			<li>{{author_book.title}} {{author_book.publication_year}} {{author_book.price}}</li>
+			{% empty %}
+			<p>у этого автора пока нет книг в каталоге</p>
+			{% endfor %}
+		</ol>
+	</body>
 </html>

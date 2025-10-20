@@ -11,5 +11,21 @@
   <p>Средняя цена: {{ avg }}</p>
   <p>Годы издания: от {{ min }} до {{ max }}</p>
   <h2>Авторы с несколькими книгами</h2>
+  	<table border="2">
+			<thead>
+				<tr>
+					<th>Имя автора</th>
+					<th>Количество книг</th>
+				</tr>
+			</thead>	
+			{% for authors in authors %}
+			<tr>
+				<td>{{ authors.name }}</td>
+				<td>{{ authors.books_count }}</td>
+			</tr>
+			{% empty %}
+			<h2>Таких авторов нет</h2>
+			{% endfor %}
+		</table>
 </body>
 </html>
